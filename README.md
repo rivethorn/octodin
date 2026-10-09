@@ -1,7 +1,7 @@
-# odin-github
+# OctOdin
 
 An [Odin](https://odin-lang.org) client library for the [GitHub REST API](https://docs.github.com/en/rest),
-in the spirit of Octokit. Managed via **[Mimir](https://github.com/anomalyco/opencode)**.
+in the spirit of Octokit. Managed via **[Mimir](https://github.com/rivethorn/mimir)**.
 
 Clone it into your project's `pkgs/` directory and import it by folder name.
 
