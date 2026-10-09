@@ -3,7 +3,7 @@ package main
 import "core:fmt"
 import "core:os"
 
-import github "pkgs:github"
+import github "../.."
 
 // Demonstrates the github library against public endpoints.
 // Set GITHUB_TOKEN to raise the rate limit; the demo works without one.

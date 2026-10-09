@@ -1,16 +1,25 @@
 # odin-github
 
 An [Odin](https://odin-lang.org) client library for the [GitHub REST API](https://docs.github.com/en/rest),
-in the spirit of Octokit. Managed via **[Mimir](https://github.com/rivethorn/mimir)**.
+in the spirit of Octokit. Managed via **[Mimir](https://github.com/anomalyco/opencode)**.
+
+Clone it into your project's `pkgs/` directory and import it by folder name.
 
 ## Quick Start
 
+The `example/` directory is a small Mimir project demonstrating the library:
+
 ```bash
+cd example
 mimir run              # Build and run the demo
 mimir run -- extended  # Broader tour: issues, search, contents, errors
-mimir build            # Compile to bin/
+mimir build            # Compile the demo to bin/
 mimir clean            # Clear build files and artifacts
 ```
+
+The repository root holds the library itself (package `github`, no
+`main` package), so it is compiled as a dependency rather than built
+directly. `odin build . -build-mode:obj` type-checks it standalone.
 
 The demo talks to public endpoints, so it works with no setup. Set
 `GITHUB_TOKEN` to authenticate and raise the rate limit:
@@ -21,8 +30,9 @@ GITHUB_TOKEN=ghp_... mimir run
 
 ## Usage
 
-The library lives in `pkgs/github` (package `github`, collection `pkgs`).
-Import it in any Mimir project with the same layout:
+The library lives at the repository root (package `github`).
+Drop the checkout into your own project's `pkgs/` directory
+(e.g. as `pkgs/github`) and import it by folder name:
 
 ```odin
 import github "pkgs:github"
