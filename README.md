@@ -34,10 +34,10 @@ GITHUB_TOKEN=ghp_... mimir run
 
 The library lives at the repository root (package `github`).
 Drop the checkout into your own project's `pkgs/` directory
-(e.g. as `pkgs/github`) and import it by folder name:
+(e.g. as `pkgs/octodin`) and import it by folder name:
 
 ```odin
-import github "pkgs:github"
+import github "pkgs:octodin"
 ```
 
 ```odin
@@ -143,5 +143,5 @@ you can manage memory your own way instead.
 
 ## License
 
-MIT. See [GitHub's REST API docs](https://docs.github.com/en/rest) for
+MIT — see [LICENSE](LICENSE). See [GitHub's REST API docs](https://docs.github.com/en/rest) for
 endpoint semantics, parameters, and required token scopes.
