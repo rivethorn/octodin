@@ -3,8 +3,8 @@ package main
 import "core:fmt"
 import "core:os"
 
-import dotenv "pkgs:dotenv"
 import github "../.."
+import dotenv "pkgs:dotenv"
 
 // Demonstrates the github library against public endpoints.
 //
@@ -17,7 +17,7 @@ import github "../.."
 //	mimir run -- extended   # broader tour: issues, search, contents, errors
 main :: proc() {
 	// Missing file is fine: real environment variables still apply.
-	_, _ = dotenv.load()
+	dotenv.load()
 
 	if len(os.args) > 1 && os.args[1] == "extended" {
 		run_extended()
