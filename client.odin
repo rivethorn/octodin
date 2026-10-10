@@ -5,7 +5,7 @@ import "core:strings"
 
 // Default values used when the corresponding Config field is left blank.
 DEFAULT_BASE_URL :: "https://api.github.com"
-DEFAULT_USER_AGENT :: "odin-github/0.1.0"
+DEFAULT_USER_AGENT  :: "OctOdin/0.1.0"
 DEFAULT_API_VERSION :: "2022-11-28"
 
 // Config describes how a Client talks to the GitHub API.
