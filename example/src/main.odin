@@ -3,15 +3,22 @@ package main
 import "core:fmt"
 import "core:os"
 
+import dotenv "pkgs:dotenv"
 import github "../.."
 
 // Demonstrates the github library against public endpoints.
-// Set GITHUB_TOKEN to raise the rate limit; the demo works without one.
+//
+// The token is read from the environment, or from an `example/.env` file
+// (see `.env.example`). The demo works without one, under the lower
+// unauthenticated rate limit.
 //
 // Usage:
 //	mimir run              # repository overview
 //	mimir run -- extended   # broader tour: issues, search, contents, errors
 main :: proc() {
+	// Missing file is fine: real environment variables still apply.
+	_, _ = dotenv.load()
+
 	if len(os.args) > 1 && os.args[1] == "extended" {
 		run_extended()
 		return

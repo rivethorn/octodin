@@ -21,8 +21,10 @@ The repository root holds the library itself (package `github`, no
 `main` package), so it is compiled as a dependency rather than built
 directly. `odin build . -build-mode:obj` type-checks it standalone.
 
-The demo talks to public endpoints, so it works with no setup. Set
-`GITHUB_TOKEN` to authenticate and raise the rate limit:
+The demo talks to public endpoints, so it works with no setup. To
+authenticate, either export `GITHUB_TOKEN` or copy `example/.env.example`
+to `example/.env` and fill in your token (loaded via
+[dotenv-odin](https://github.com/rivethorn/dotenv-odin), never commit it):
 
 ```bash
 GITHUB_TOKEN=ghp_... mimir run
