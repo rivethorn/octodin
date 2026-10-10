@@ -1,5 +1,3 @@
-# OctOdin
-
 <div align="center" style="">
     <img src="assets/banner.png" style="height: auto; width: 20vw; object-fit: cover"/>
 </div>
