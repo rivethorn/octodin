@@ -1,5 +1,5 @@
-<div align="center" style="">
-    <img src="assets/banner.png" style="height: auto; width: 60%; object-fit: cover"/>
+<div align="center">
+    <img src="assets/banner.png"/>
 </div>
 
 An [Odin](https://odin-lang.org) client library for the [GitHub REST API](https://docs.github.com/en/rest),
