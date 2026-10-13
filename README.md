@@ -34,27 +34,27 @@ GITHUB_TOKEN=ghp_... mimir run
 
 ## Usage
 
-The library lives at the repository root (package `github`).
+The library lives at the repository root (package `octodin`).
 Drop the checkout into your own project's `pkgs/` directory
 (e.g. as `pkgs/octodin`) and import it by folder name:
 
 ```odin
-import github "pkgs:octodin"
+import "pkgs:octodin"
 ```
 
 ```odin
-client := github.client_make(github.Config{token = "ghp_..."})
-defer github.client_destroy(&client)
+client := octodin.client_make(octodin.Config{token = "ghp_..."})
+defer octodin.client_destroy(&client)
 
-repo, resp, err := github.get_repo(&client, "odin-lang", "Odin")
+repo, resp, err := octodin.get_repo(&client, "odin-lang", "Odin")
 if err != nil {
-    msg := github.error_message(err)
+    msg := octodin.error_message(err)
     defer delete(msg)
     fmt.eprintfln("failed: %s", msg)
     return
 }
-defer github.response_destroy(&resp)
-defer github.destroy_repository(&repo)
+defer octodin.response_destroy(&resp)
+defer octodin.destroy_repository(&repo)
 
 fmt.println(repo.full_name, repo.stargazers_count)
 fmt.println("rate:", resp.rate.remaining, "/", resp.rate.limit)
@@ -62,7 +62,7 @@ fmt.println("rate:", resp.rate.remaining, "/", resp.rate.limit)
 
 ### Authentication
 
-Pass a token in `github.Config.token`. Fine-grained personal access tokens,
+Pass a token in `octodin.Config.token`. Fine-grained personal access tokens,
 classic tokens, OAuth tokens, and GitHub App user tokens all work — the
 library sends them as `Authorization: Bearer <token>`. Omit the token for
 public resources (stricter unauthenticated rate limits apply).
@@ -96,7 +96,7 @@ layer — `do_request`, `get`, `post_raw` / `put_raw` / `patch_raw`, `del`,
 
 ```odin
 // Typed decode of any endpoint, e.g. a preview API:
-resp, err := github.get(&client, "/repos/odin-lang/Odin/traffic/views")
+resp, err := octodin.get(&client, "/repos/odin-lang/Odin/traffic/views")
 ```
 
 ### Pagination
@@ -104,7 +104,7 @@ resp, err := github.get(&client, "/repos/odin-lang/Odin/traffic/views")
 List endpoints take option structs embedding `List_Options`:
 
 ```odin
-issues, resp, err := github.list_repo_issues(
+issues, resp, err := octodin.list_repo_issues(
     &client, "odin-lang", "Odin", {per_page = 50, page = 2, state = "open"},
 )
 ```
@@ -112,8 +112,8 @@ issues, resp, err := github.list_repo_issues(
 Follow-up pages come from the `Link` header:
 
 ```odin
-info := github.page_info(resp)       // next / prev / first / last
-next := github.next_page_path(&client, resp)
+info := octodin.page_info(resp)       // next / prev / first / last
+next := octodin.next_page_path(&client, resp)
 ```
 
 ### API coverage
