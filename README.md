@@ -19,7 +19,7 @@ mimir build            # Compile the demo to bin/
 mimir clean            # Clear build files and artifacts
 ```
 
-The repository root holds the library itself (package `github`, no
+The repository root holds the library itself (package `octodin`, no
 `main` package), so it is compiled as a dependency rather than built
 directly. `odin build . -build-mode:obj` type-checks it standalone.
 
@@ -70,7 +70,7 @@ public resources (stricter unauthenticated rate limits apply).
 For GitHub Enterprise Server, point the client at your instance:
 
 ```odin
-client := github.client_make(github.Config{
+client := octodin.client_make(octodin.Config{
     token    = "...",
     base_url = "https://ghe.example.com/api/v3",
 })
