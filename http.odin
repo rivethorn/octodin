@@ -1,4 +1,4 @@
-package github
+package octodin
 
 import "base:runtime"
 import c_libc "core:c/libc"

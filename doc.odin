@@ -1,4 +1,4 @@
-// Package github is a client library for the GitHub REST API (api.github.com).
+// package octodin is a client library for the GitHub REST API (api.github.com).
 //
 // It follows the spirit of Octokit and similar toolkits: a small,
 // resource-oriented surface over a shared, authenticated HTTP client.
@@ -35,4 +35,4 @@
 // token, or a GitHub App user token, passed as Config.token. Requests
 // without a token work for public resources, subject to the stricter
 // unauthenticated rate limits.
-package github
+package octodin

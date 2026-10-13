@@ -1,4 +1,4 @@
-package github
+package octodin
 
 // This file defines the resource types returned by the GitHub REST API.
 //

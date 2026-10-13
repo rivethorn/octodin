@@ -1,4 +1,4 @@
-package github
+package octodin
 
 import "core:mem"
 import "core:strings"

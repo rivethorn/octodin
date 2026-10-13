@@ -1,4 +1,4 @@
-package github
+package octodin
 
 import "core:fmt"
 import "core:strings"
