@@ -147,3 +147,12 @@ you can manage memory your own way instead.
 
 MIT — see [LICENSE](LICENSE). See [GitHub's REST API docs](https://docs.github.com/en/rest) for
 endpoint semantics, parameters, and required token scopes.
+
+### Powered by
+<div style="height: auto; width: 70%;">
+<picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/GitHub_Lockup_White_Clearspace.png">
+        <source media="(prefers-color-scheme: light)" srcset="assets/GitHub_Lockup_Black_Clearspace.png">
+        <img alt="GitHub Invertocat" src="assets/GitHub_Lockup_White_Clearspace.png">
+</picture>
+</div>
