@@ -149,7 +149,12 @@ MIT — see [LICENSE](LICENSE). See [GitHub's REST API docs](https://docs.github
 endpoint semantics, parameters, and required token scopes.
 
 ### Powered by
-<div style="height: auto; width: 70%;">
+<div align="center" style="height: auto; width: 70%;">
+<picture>
+        <source media="(prefers-color-scheme: dark)" srcset="assets/Odin_Logo_White.png">
+        <source media="(prefers-color-scheme: light)" srcset="assets/Odin_Logo_Black.png">
+        <img alt="Odin Logo" src="assets/Odin_Logo_White.png">
+</picture>
 <picture>
         <source media="(prefers-color-scheme: dark)" srcset="assets/GitHub_Lockup_White_Clearspace.png">
         <source media="(prefers-color-scheme: light)" srcset="assets/GitHub_Lockup_Black_Clearspace.png">
